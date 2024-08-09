@@ -19,22 +19,22 @@ The notebook follows these main steps:
 
 To run this notebook, you need to have Python and Jupyter Notebook installed on your machine. Additionally, you'll need to install the required Python packages. You can install these using `pip`:
 
-\`\`\`bash
+```bash
 pip install numpy matplotlib seaborn scikit-learn
-\`\`\`
+```
 
 ## Usage
 
 1. **Load the Data**: The dataset is loaded using the `load_digits()` function from scikit-learn.
 
-    \`\`\`python
+    ```python
     from sklearn.datasets import load_digits
     digits = load_digits()
-    \`\`\`
+    ```
 
 2. **Display the Images**: Display the first five images and their corresponding labels using Matplotlib.
 
-    \`\`\`python
+    ```python
     import numpy as np 
     import matplotlib.pyplot as plt
 
@@ -43,32 +43,32 @@ pip install numpy matplotlib seaborn scikit-learn
         plt.subplot(1, 5, index + 1)
         plt.imshow(np.reshape(image, (8,8)), cmap=plt.cm.gray)
         plt.title('%i\\n' % label, fontsize = 20)
-    \`\`\`
+    ```
 
 3. **Split the Data**: Split the data into training and test sets.
 
-    \`\`\`python
+    ```python
     from sklearn.model_selection import train_test_split
     x_train, x_test, y_train, y_test = train_test_split(digits.data, digits.target, test_size=0.2, random_state=0)
-    \`\`\`
+    ```
 
 4. **Train the Model**: Train a Logistic Regression model.
 
-    \`\`\`python
+    ```python
     from sklearn.linear_model import LogisticRegression
     logRegr = LogisticRegression(solver='saga', max_iter=2000)
     logRegr.fit(x_train, y_train)
-    \`\`\`
+    ```
 
 5. **Test the Model**: Use the trained model to make predictions on the test set.
 
-    \`\`\`python
+    ```python
     predictions = logRegr.predict(x_test)
-    \`\`\`
+    ```
 
 6. **Evaluate the Model**: Calculate the model's accuracy and display the confusion matrix.
 
-    \`\`\`python
+    ```python
     from sklearn import metrics
     import seaborn as sns
 
@@ -81,7 +81,7 @@ pip install numpy matplotlib seaborn scikit-learn
     plt.xlabel('Predicted Value')
     plt.title('Accuracy Score: {0}'.format(score), size = 15)
     plt.show()
-    \`\`\`
+    ```
 
 ## Results
 
@@ -96,5 +96,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - The scikit-learn library for providing the `digits` dataset and machine learning tools.
 - The Matplotlib and Seaborn libraries for visualization support.
-"""
 
