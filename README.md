@@ -44,7 +44,7 @@ pip install numpy matplotlib seaborn scikit-learn
         plt.imshow(np.reshape(image, (8,8)), cmap=plt.cm.gray)
         plt.title('%i\\n' % label, fontsize = 20)
     ```
-![digits dataset](pynbs\hwdlr-1.png)
+![digits dataset](../../hwdlr-1.png)
 
 3. **Split the Data**: Split the data into training and test sets.
 
@@ -88,7 +88,7 @@ pip install numpy matplotlib seaborn scikit-learn
 
 - **Accuracy**: The Logistic Regression model achieved an accuracy of approximately **96.39%** on the test set.
 - **Confusion Matrix**: The confusion matrix provides a detailed breakdown of the model's performance across different digit classes.
-![digits dataset](pynbs\hwdlr-2.png)
+![digits dataset](../../hwdlr-2.png)
 
 ## Acknowledgments
 
